@@ -4,6 +4,8 @@ ENV GO111MODULE=on
 COPY . /go4lunch
 WORKDIR /go4lunch
 RUN go mod download
+RUN go get -u github.com/google/wire/cmd/wire
+RUN wire
 RUN CGO_ENABLED=0 GOOS=linux go build -o bin/application
 
 # Run Image
