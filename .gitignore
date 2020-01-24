@@ -29,3 +29,5 @@ out/
 # Dependency directories (remove the comment below to include it)
 # vendor/
 
+# wire
+wire_gen.go
